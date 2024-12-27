@@ -10,12 +10,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(
   cors({
-    origin: [
-      'https://ultimate-tripz.netlify.app',
-      'https://ultimate-tripz-next.vercel.app',
-      'http://localhost:3000',
-    ], // Allow your frontend URL
-    credentials: true, // Allow credentials to be included
+    origin: ['*', 'http://localhost:3000'],
+    credentials: true,
   }),
 )
 
@@ -23,7 +19,7 @@ app.use(
 app.use('/api', router)
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Ultimate Tripz Running!')
+  res.send('Sudipta das portfolio Running!')
 })
 app.use(globalErrorHandler)
 

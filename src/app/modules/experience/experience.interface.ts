@@ -5,4 +5,5 @@ export type TExperience = {
   date: string
   current: boolean
   description: string
+  serial: number
 }

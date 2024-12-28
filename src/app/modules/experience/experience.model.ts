@@ -9,6 +9,7 @@ const experienceSchema = new Schema<TExperience>(
     date: { type: String, required: true },
     current: { type: Boolean, default: false },
     description: { type: String, required: true },
+    serial: { type: Number, required: true },
   },
   {
     timestamps: true,

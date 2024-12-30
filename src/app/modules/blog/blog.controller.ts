@@ -7,11 +7,11 @@ import { blogServices } from './blog.service'
 const createBlog = catchAsync(async (req, res) => {
   const postInfo = req.body
   const file = req.file as TImageFile
-  const filePaths = file?.path
+  const imagePath = file?.path
 
   const payload = {
     ...postInfo,
-    cover: filePaths,
+    cover: imagePath,
   }
 
   const result = await blogServices.createBlogIntoDB(payload)

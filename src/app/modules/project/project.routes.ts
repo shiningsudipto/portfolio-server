@@ -11,7 +11,12 @@ router.post(
   parseBody,
   projectControllers.createProject,
 )
-router.put('/', projectControllers.updateProject)
+router.put(
+  '/:id',
+  multerUpload.single('img'),
+  parseBody,
+  projectControllers.updateProject,
+)
 router.get('/', projectControllers.getAllProject)
 router.get('/:slug', projectControllers.getSingleProject)
 router.delete('/', projectControllers.deleteProject)

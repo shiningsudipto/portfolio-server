@@ -1,5 +1,5 @@
 export type TTechnology = {
   category: string
-  items: string[]
+  items: string
   serial: number
 }

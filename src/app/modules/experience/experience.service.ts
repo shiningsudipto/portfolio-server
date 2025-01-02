@@ -6,7 +6,7 @@ const createExperienceIntoDB = async (payload: TExperience) => {
   return result
 }
 const getAllExperienceFromDB = async () => {
-  const result = await ExperienceModel.find()
+  const result = await ExperienceModel.find().sort({ serial: 1 })
   return result
 }
 const updateExperienceIntoDB = async (

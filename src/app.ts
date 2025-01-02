@@ -12,6 +12,7 @@ app.use(
   cors({
     origin: [
       'https://sd-portfolio-admin.netlify.app',
+      'https://sudiptadas.netlify.app',
       'http://localhost:3000',
       'http://localhost:5173',
     ],

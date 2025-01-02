@@ -13,7 +13,7 @@ const createProjectIntoDB = async (payload: TProject) => {
   return result
 }
 const getAllProjectsFromDB = async () => {
-  const result = await ProjectModel.find()
+  const result = await ProjectModel.find().sort({ serial: 1 })
   return result
 }
 const getSingleProjectFromDB = async (slug: string) => {

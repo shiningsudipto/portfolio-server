@@ -6,7 +6,7 @@ const createTechnologyIntoDB = async (payload: TTechnology) => {
   return result
 }
 const getAllTechnologyFromDB = async () => {
-  const result = await TechnologyModel.find()
+  const result = await TechnologyModel.find().sort({ serial: 1 })
   return result
 }
 const updateTechnologyIntoDB = async (

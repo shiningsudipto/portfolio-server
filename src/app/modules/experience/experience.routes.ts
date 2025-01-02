@@ -4,7 +4,7 @@ import { experienceControllers } from './experience.controller'
 const router = express.Router()
 
 router.post('/', experienceControllers.createExperience)
-router.put('/', experienceControllers.updateExperience)
+router.put('/:id', experienceControllers.updateExperience)
 router.get('/', experienceControllers.getAllExperience)
 router.delete('/', experienceControllers.deleteExperience)
 
